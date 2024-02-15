@@ -1,0 +1,21 @@
+body {
+	background-image: url(../assets/spacebg.jpeg);
+	background-size: cover;
+}
+
+#title.done::after {
+	animation: cursorblink 1s infinite;
+	content: "_";
+}
+
+@keyframes cursorblink {
+	0% {
+		content: "";
+	}
+	50% {
+		content: "_";
+	}
+	100% {
+		content: "";
+	}
+}
