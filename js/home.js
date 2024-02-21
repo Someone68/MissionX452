@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
-	setTimeout(() => {
-		typeEffect(s("#title"), "Round Trip", 50, () => {
-			s("#title").classList.add("done");
-		});
-	}, 1000);
+  s("#title").classList.add("typing");
+  typeEffect(s("#title"), "Mission X452", 50, () => {
+    s("#start").style.top =
+      s("#startplaceholder").getBoundingClientRect().top + "px";
+  });
 });

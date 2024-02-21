@@ -1,21 +1,63 @@
 body {
-	background-image: url(../assets/spacebg.jpeg);
-	background-size: cover;
+  background-image: url(../assets/spacebg.jpeg);
+  background-size: cover;
+  overflow: hidden;
 }
 
-#title.done::after {
-	animation: cursorblink 1s infinite;
-	content: "_";
+.centercontainer {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.centerepic {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  text-align: center;
+  box-sizing: border-box;
+  height: fit-content;
+  flex-direction: column;
+}
+
+#title {
+  font-size: 6em;
+  color: white;
+}
+
+#title.typing::after {
+  animation: cursorblink 1s infinite;
+  content: "_";
+  position: absolute;
 }
 
 @keyframes cursorblink {
-	0% {
-		content: "";
-	}
-	50% {
-		content: "_";
-	}
-	100% {
-		content: "";
-	}
+  0% {
+    content: "";
+  }
+  50% {
+    content: "_";
+  }
+  100% {
+    content: "";
+  }
+}
+
+#start {
+  position: absolute;
+  top: calc(100% + 40px);
+  transition: 4s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  color: aquamarine;
+  text-decoration: none;
+}
+
+#start,
+#startplaceholder {
+  font-size: 17px;
+}
+
+#startplaceholder {
+  margin: 10px;
 }
