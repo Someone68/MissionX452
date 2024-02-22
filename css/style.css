@@ -1,6 +1,11 @@
 @font-face {
   font-family: code;
-  src: url(../assets/FiraCode-Regular.ttf);
+  src: url(../assets/FiraCode_Regular.ttf);
+}
+
+@font-face {
+  font-family: code-thin;
+  src: url(../assets/ibmplexmono_extralight.ttf);
 }
 
 @font-face {
@@ -31,4 +36,8 @@ body {
 
 .sans {
   font-family: sans;
+}
+
+.thin {
+  font-family: code-thin;
 }
