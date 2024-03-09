@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onclick="start()">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mission X452</title>
-    <!-- Hey there 👋. This is the phaser.js (my game engin) CDN import -->
-    <script src="//cdn.jsdelivr.net/npm/phaser@3.70.0/dist/phaser.min.js"></script>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="./css/game.css" />
   </head>
   <body>
-    <div class="gamecontainer"></div>
-    <script src="./js/scenes/Main.js"></script>
+    <h1 id="year">Click anywhere to enable sound</h1>
+    <div class="terminal">
+      <div class="output"><pre id="start"></pre></div>
+      <div class="user">
+        <div class="path"></div>
+        <div class="input"></div>
+      </div>
+    </div>
+    <!--my utility package that i made (https://ut1l.pages.dev)-->
+    <script src="../js/util.js"></script>
     <script src="./js/game.js"></script>
   </body>
 </html>

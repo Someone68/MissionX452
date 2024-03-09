@@ -40,17 +40,26 @@ function typeEffect(
   element,
   txt = "No text provided",
   speed = 50,
-  callback = null
+  callback = null,
+  beep = true
 ) {
   let i = 0;
 
   function typeWriter() {
     if (i < txt.length) {
+      if (beep) {
+        let beep = new Audio("/game/assets/beep.mp3");
+        beep.play();
+      }
       let a = element.innerText.split("");
       a[i] = txt.charAt(i);
       element.innerHTML = a.join("").replaceAll(" ", "&nbsp;");
+      let speedmodified = speed;
+      if (txt.charAt(i) === ".") speedmodified += 500;
+      else if (txt.charAt(i) === ",") speedmodified += 300;
+      console.log(speedmodified);
       i++;
-      setTimeout(typeWriter, speed);
+      setTimeout(typeWriter, speedmodified);
     } else {
       if (callback) callback(element, txt, speed);
     }
